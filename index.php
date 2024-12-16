@@ -1,4 +1,4 @@
 <?php get_header(); ?>
-  <p>TESTE</p>
+  <p>BODY</p>
 </body>
 </html>
