@@ -7,8 +7,14 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-  <header class="header_container xl:flex sm:w-full xl:h-[104px] justify-between items-center mx-auto container relative z-50">
-    <div>LOGO</div>   
+  <header class="header_container xl:flex sm:w-full xl:h-[104px] justify-between items-center mx-auto container">
+    <div class="logo_icon_container flex">
+      <div class="logo_container cursor-pointer">
+        <a href="http://localhost/wpavanti">
+          <img src=<?php echo get_template_directory_uri() . "/assets/avantiLogo.png" ?> alt="Logo da Avanti" class="xl:w-[148px] xl:h-[27px] sm:w-[124px] sm:h-[22px] relative z-[100]">
+        </a>
+      </div>
+    </div>   
     <nav class="xl:flex xl:items-center">
       <?php wp_nav_menu( array( 'theme_location' => 'header_menu', 'container' => 'none' ) ); ?> <!--container: none força a ul como filho do nav --> 
     </nav>
