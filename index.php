@@ -1,3 +1,3 @@
-<?php get_template_part('template-parts/banner-hero'); ?>
-</body>
-</html>
+<div>
+  <h1>Silence is golden...</h1>
+</div>
