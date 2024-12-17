@@ -621,6 +621,22 @@ video {
   height: 100%;
 }
 
+.h-\[calc\(100vh-theme\(space\.20\)\)\] {
+  height: calc(100vh - 5rem);
+}
+
+.h-\[calc\(100vh-theme\(space\.10\)\)\] {
+  height: calc(100vh - 2.5rem);
+}
+
+.h-\[calc\(100vh-theme\(space\.24\)\)\] {
+  height: calc(100vh - 6rem);
+}
+
+.h-\[calc\(100vh-theme\(space\.28\)\)\] {
+  height: calc(100vh - 7rem);
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
