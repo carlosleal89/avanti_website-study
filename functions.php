@@ -1,4 +1,5 @@
 <?php
+add_filter('show_admin_bar', '__return_false'); //remove a barra de admin do topo da página
 
 
 //adiciona o Tailwind e CSS ao tema.
