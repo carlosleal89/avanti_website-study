@@ -600,12 +600,12 @@ video {
   inset: 0px;
 }
 
-.z-\[100\] {
-  z-index: 100;
-}
-
 .z-10 {
   z-index: 10;
+}
+
+.z-\[100\] {
+  z-index: 100;
 }
 
 .mx-auto {
@@ -649,27 +649,9 @@ video {
   justify-content: space-between;
 }
 
-.rounded-full {
-  border-radius: 9999px;
-}
-
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.p-20 {
-  padding: 5rem;
-}
-
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
 }
 
 .px-10 {
@@ -680,6 +662,11 @@ video {
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .py-3 {
@@ -697,15 +684,6 @@ video {
 
 .text-center {
   text-align: center;
-}
-
-.font-bold {
-  font-weight: 700;
-}
-
-.text-red-500 {
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity, 1));
 }
 
 .text-blue-700 {
@@ -726,19 +704,11 @@ video {
   .sm\:w-\[124px\] {
     width: 124px;
   }
-
-  .sm\:w-full {
-    width: 100%;
-  }
 }
 
 @media (min-width: 1280px) {
   .xl\:flex {
     display: flex;
-  }
-
-  .xl\:h-\[104px\] {
-    height: 104px;
   }
 
   .xl\:h-\[27px\] {
