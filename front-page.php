@@ -2,5 +2,4 @@
   <?php get_header(); ?>
   <?php get_template_part( '/template-parts/banner-hero' ); ?>
 </section>
-</body>
-</html>
+<?php get_footer(); ?>
