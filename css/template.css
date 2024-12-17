@@ -11,3 +11,17 @@ body {
 .container {
   max-width: 1280px; /*?????? Necessário estilizar aqui ou usar classes do tailwind?*/
 }
+
+.form-contact-link {
+  border-radius: 50px;
+  background-color: blue;
+  color: white;
+}
+
+.banner-hero-content h1 {
+  font-size: 3rem;
+}
+
+.banner-hero-content p {
+  font-size: 1.25rem;
+}

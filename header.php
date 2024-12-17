@@ -7,7 +7,7 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-  <header class="header_container container mx-auto flex justify-between items-center py-10 z-10">
+  <header class="header_container container mx-auto flex justify-between items-center py-10 px-10 z-10">
     <div class="logo_icon_container flex">
       <div class="logo_container cursor-pointer">
         <a href="http://localhost/wpavanti">
