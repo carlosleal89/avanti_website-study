@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        grayisblue: '#979A9E'
+        grayishblue: '#979A9E'
       }
     },
   },
