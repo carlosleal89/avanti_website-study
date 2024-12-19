@@ -718,6 +718,14 @@ video {
   padding-bottom: 5rem;
 }
 
+.pb-8 {
+  padding-bottom: 2rem;
+}
+
+.pt-8 {
+  padding-top: 2rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -759,6 +767,22 @@ video {
 
   .sm\:w-\[124px\] {
     width: 124px;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:flex-row {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:flex-row {
+    flex-direction: row;
+  }
+
+  .lg\:justify-between {
+    justify-content: space-between;
   }
 }
 

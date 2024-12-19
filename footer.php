@@ -1,28 +1,26 @@
   <footer class="footer px-10 mx-auto">
     <div class="logo_info_container container flex flex-col py-10 mx-auto justify-between">
-      <div class="flex justify-between pb-20">
-        <div class="logo_container flex">
+      <div class="flex flex-col lg:flex-row justify-between pb-20">
+        <div class="logo_container flex pb-8">
           <img src=<?php echo get_template_directory_uri() . "/assets/avantiLogo.png" ?> alt="Logo da Avanti" class="xl:w-[148px] xl:h-[27px] sm:w-[124px] sm:h-[22px] relative z-[100]">
         </div>
-        <div class="flex gap-x-8">
-          <div class="addresses_container flex gap-x-8">
-            <div class="flex flex-col">
-              <div class="address_container flex flex-col pb-4 text-grayishblue text-sm">
-                <h1 class="text-white mb-1"><?php the_field('cidade') ?> - <?php the_field('estado') ?></h1>
-                <p><?php the_field('logradouro'); ?>, <?php the_field('numero') ?></p>
-                <p><?php the_field('complemento') ?></p>
-                <p><?php the_field('bairro') ?> - CEP <?php the_field('cep') ?></p>
-              </div>
-              <div class="address_container2 flex flex-col pb-4 text-grayishblue text-sm">
-                <h1 class="text-white mb-1"><?php the_field('cidade2') ?> - <?php the_field('estado2') ?></h1>
-                <p><?php the_field('logradouro2') ?>, <?php the_field('numero2') ?></p>
-                <p><?php the_field('complemento2') ?></p>
-                <p><?php the_field('bairro2') ?> - CEP <?php the_field('cep2') ?></p>
-              </div>
-              <p class="text-sm text-grayishblue"><?php the_field('email_de_contato') ?></p>
+        <div class="flex flex-col lg:flex-row gap-x-8">          
+          <div class="addresses_container flex flex-col pb-8 gap-x-8">
+            <div class="address_container flex flex-col pb-4 text-grayishblue text-sm">
+              <h1 class="text-white mb-1"><?php the_field('cidade') ?> - <?php the_field('estado') ?></h1>
+              <p><?php the_field('logradouro'); ?>, <?php the_field('numero') ?></p>
+              <p><?php the_field('complemento') ?></p>
+              <p><?php the_field('bairro') ?> - CEP <?php the_field('cep') ?></p>
             </div>
-          </div>
-          <div class="links_container flex flex-col text-sm text-grayishblue">
+            <div class="address_container2 flex flex-col pb-4 text-grayishblue text-sm">
+              <h1 class="text-white mb-1"><?php the_field('cidade2') ?> - <?php the_field('estado2') ?></h1>
+              <p><?php the_field('logradouro2') ?>, <?php the_field('numero2') ?></p>
+              <p><?php the_field('complemento2') ?></p>
+              <p><?php the_field('bairro2') ?> - CEP <?php the_field('cep2') ?></p>
+            </div>
+            <p class="text-sm text-grayishblue"><?php the_field('email_de_contato') ?></p>
+          </div>          
+          <div class="links_container flex flex-col text-sm text-grayishblue pb-8">
             <h1 class="text-white mb-1">
               Soluções para seu E-commerce
             </h1>
@@ -86,14 +84,14 @@
             </div>
         </div>
       </div>
-      <div class="info_social_media_container flex justify-between items-center">
+      <div class="info_social_media_container flex flex-col md:flex-row lg:flex-row justify-between">
         <div class="info_container flex flex-col text-sm gap-y-4">
           <p>© 2024 Todos os Direitos Reservados.</p>
           <p>Avanti Desenvolvimento de Sistemas LTDA<br>
           CNPJ 19.697.992/0001-86</p>
           <p class="text-grayishblue">Transformando o futuro do seu comércio digital</p>
         </div>
-        <div class="social_media_icons_container flex gap-x-4">
+        <div class="social_media_icons_container flex gap-x-4 items-center pt-8">
           <p class="text-sm text-white">Redes Sociais</p>
           <div class="flex gap-x-2">
             <a href="https://www.instagram.com/penseavanti/" target="blank">
