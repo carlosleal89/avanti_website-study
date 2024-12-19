@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: white;
 }
@@ -46,18 +50,20 @@ body {
 
 .contact-form input[type=text], input[type=email], input[type=tel], select {
   background-color: #272e36;
-  padding: 15px;
+  padding: 5px 15px;
+  height: 40px;
   margin-top: 10px;
   border-radius: 5px;
   width: 100%;
-  border: 1px solid hsla(0, 0%, 100%, .08);;
+  border: 1px solid hsla(0, 0%, 100%, .08);
+  font-size: 16px;
 }
 
 .contact-form .contact-form-submit-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 5px;
+  padding: 10px 20px;
   margin: 1.25rem 1rem 0 0;
   border-radius: 9999px;
   background-color: rgb(0 92 255);
@@ -67,10 +73,18 @@ body {
   color: #979a9e;
 }
 
+.wpcf7-form-control.wpcf7-select  option:not(:first-child) {
+  color:  #e8e9ea;
+}
+
 .label-text {
   color: #e8e9ea;
   font-size: 18px;
   font-weight: 400;
+}
+
+.contact-form-submit-btn svg {
+  margin-left: 10px;
 }
 
 @media (min-width: 769px) {
