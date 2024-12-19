@@ -18,3 +18,16 @@ function wp_avanti_menus() {
 }
 
 add_action('after_setup_theme', 'wp_avanti_menus', 0);
+
+//adiciona font-awesome
+function enqueue_font_awesome() {
+  wp_enqueue_script(
+    'font-awesome', 
+    'https://kit.fontawesome.com/83a09da298.js',
+    array(), 
+    null, 
+    true
+  );  
+}
+
+add_action('wp_enqueue_scripts', 'enqueue_font_awesome');
