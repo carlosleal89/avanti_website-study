@@ -7,7 +7,7 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-  <header class="header_container container mx-auto flex justify-between items-center py-10 px-10 z-10">
+  <header class="header_container container mx-auto flex justify-between xl:items-center py-10 px-10 z-10">
     <div class="logo_icon_container flex">
       <div class="logo_container cursor-pointer">
         <a href="http://localhost/wpavanti">
@@ -15,7 +15,10 @@
         </a>
       </div>
     </div>   
-    <nav class="xl:flex xl:items-center z-10">
+    <nav class="hidden xl:flex xl:items-center z-10">
       <?php wp_nav_menu( array( 'theme_location' => 'header_menu', 'container' => 'none' ) ); ?> <!--container: none força a ul como filho do nav --> 
+    </nav>
+    <nav class="menu-mobile z-10 xl:hidden">
+      <?php wp_nav_menu( array( 'theme_location' => 'header_menu', 'container' => 'none' ) ); ?>
     </nav>
   </header>

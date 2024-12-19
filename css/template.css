@@ -17,14 +17,16 @@ body {
   color: white;
 }
 
-.banner-hero-content h1 {
-  font-size: 3rem;
-}
-
 .banner-hero-content p {
   font-size: 1.25rem;
 }
 
 .footer {
   background-color: #151A20;
+}
+
+.menu-mobile ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
