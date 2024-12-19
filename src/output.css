@@ -802,6 +802,10 @@ video {
   .sm\:w-\[124px\] {
     width: 124px;
   }
+
+  .sm\:justify-between {
+    justify-content: space-between;
+  }
 }
 
 @media (min-width: 768px) {
@@ -811,6 +815,10 @@ video {
 
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:justify-between {
+    justify-content: space-between;
   }
 
   .md\:py-20 {

@@ -14,11 +14,14 @@
           <img src=<?php echo get_template_directory_uri() . "/assets/avantiLogo.png" ?> alt="Logo da Avanti" class="xl:w-[148px] xl:h-[27px] sm:w-[124px] sm:h-[22px] relative z-[100]">
         </a>
       </div>
+      <div class="mobile-menu-btn xl:hidden z-[100]">
+        <img src=<?php echo get_template_directory_uri() . "/assets/hamburger-icon.png" ?> alt="icone menu" >
+      </div>
     </div>   
     <nav class="hidden xl:flex xl:items-center z-10">
       <?php wp_nav_menu( array( 'theme_location' => 'header_menu', 'container' => 'none' ) ); ?> <!--container: none força a ul como filho do nav --> 
     </nav>
-    <nav class="menu-mobile z-10 xl:hidden">
+    <nav class="hidden menu-mobile z-10 xl:hidden">
       <?php wp_nav_menu( array( 'theme_location' => 'header_menu', 'container' => 'none' ) ); ?>
     </nav>
   </header>
