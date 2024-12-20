@@ -44,3 +44,6 @@ function enqueue_menu_toggle() {
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_menu_toggle');
+
+//Adiciona arquivo walker.php
+require get_template_directory() . '/helpers/walker.php';

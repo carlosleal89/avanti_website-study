@@ -792,6 +792,10 @@ video {
   font-weight: 700;
 }
 
+.capitalize {
+  text-transform: capitalize;
+}
+
 .\!leading-\[50px\] {
   line-height: 50px !important;
 }

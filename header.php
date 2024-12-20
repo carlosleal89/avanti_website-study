@@ -18,7 +18,12 @@
         <img src=<?php echo get_template_directory_uri() . "/assets/hamburger-icon.png" ?> alt="icone menu" >
       </div>
       <nav class="hidden xl:flex xl:items-center z-10">
-        <?php wp_nav_menu( array( 'theme_location' => 'header_menu', 'container' => 'none' ) ); ?> <!--container: none força a ul como filho do nav --> 
+        <?php 
+          wp_nav_menu( array(
+                            'theme_location' => 'header_menu',
+                            'container' => 'none',
+                            'walker' => new Menu_Walker ) );
+        ?> <!--container: none força a ul como filho do nav --> 
       </nav>
       <div id="menu_mobile" class="xl:hidden mobile-menu-hide">
         <nav class="menu-mobile xl:hidden">
