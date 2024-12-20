@@ -31,3 +31,16 @@ function enqueue_font_awesome() {
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_font_awesome');
+
+//adicionar script pro menu hamburguer
+function enqueue_menu_toggle() {
+  wp_enqueue_script(
+    'menu-toggle-button',
+    get_template_directory_uri() . '/assets/js/hamburguerMenuToggle.js',
+    array(),
+    '1.0.0',
+    true
+  );
+}
+
+add_action('wp_enqueue_scripts', 'enqueue_menu_toggle');
