@@ -126,6 +126,22 @@ body {
   margin-left: 10px;
 }
 
+/*Slider Cases*/
+.slider {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.slider-item img {
+  width: 50%;
+  height: 80%;
+  border-radius: 10px;
+}
+
+.slider-item h3 {
+  color: black;
+}
+
 @media (min-width: 769px) {
   .contact-form .form-row {
     display: flex;

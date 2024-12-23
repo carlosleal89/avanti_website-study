@@ -47,3 +47,16 @@ add_action('wp_enqueue_scripts', 'enqueue_menu_toggle');
 
 //Adiciona arquivo walker.php
 require get_template_directory() . '/helpers/walker.php';
+
+//Adiciona o Slick Slider no tema
+function enqueue_slick_slider() {
+  wp_enqueue_script('jquery');
+
+  wp_enqueue_style('slick-css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css');
+  // wp_enqueue_style('slick-theme-css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css'); Necessário?
+
+  wp_enqueue_script('slick-js', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js', array('jquery'), null, true);
+
+  wp_enqueue_script('custom-slider-js', get_template_directory_uri() . '/assets/js/customSlider.js', array('jquery', 'slick-js'), null, true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_slick_slider');
