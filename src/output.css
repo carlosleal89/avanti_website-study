@@ -637,18 +637,15 @@ video {
   margin-top: 1.5rem;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .line-clamp-3 {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
-}
-
-.line-clamp-2 {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
 }
 
 .flex {
@@ -671,20 +668,24 @@ video {
   min-height: 100vh;
 }
 
-.w-full {
-  width: 100%;
-}
-
-.w-screen {
-  width: 100vw;
-}
-
 .w-\[40\%\] {
   width: 40%;
 }
 
 .w-\[60\%\] {
   width: 60%;
+}
+
+.w-\[74\%\] {
+  width: 74%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-screen {
+  width: 100vw;
 }
 
 .-translate-x-1\/2 {
@@ -729,6 +730,10 @@ video {
 
 .gap-y-4 {
   row-gap: 1rem;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .overflow-visible {
@@ -802,6 +807,10 @@ video {
   text-align: center;
 }
 
+.text-start {
+  text-align: start;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -810,6 +819,10 @@ video {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-\[28px\] {
+  font-size: 28px;
 }
 
 .text-sm {
@@ -834,6 +847,11 @@ video {
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
 
+.text-darkishgray {
+  --tw-text-opacity: 1;
+  color: rgb(77 77 87 / var(--tw-text-opacity, 1));
+}
+
 .text-grayishblue {
   --tw-text-opacity: 1;
   color: rgb(151 154 158 / var(--tw-text-opacity, 1));
@@ -842,6 +860,11 @@ video {
 .text-royalblue {
   --tw-text-opacity: 1;
   color: rgb(0 92 255 / var(--tw-text-opacity, 1));
+}
+
+.text-secondary {
+  --tw-text-opacity: 1;
+  color: rgb(16 20 25 / var(--tw-text-opacity, 1));;
 }
 
 .text-white {
@@ -854,13 +877,6 @@ video {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
-}
-
-.line-clamp-2 {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
 }
 
 @media (min-width: 640px) {
@@ -908,8 +924,8 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .lg\:w-\[40\%\] {
-    width: 40%;
+  .lg\:w-3\/4 {
+    width: 75%;
   }
 
   .lg\:flex-row {

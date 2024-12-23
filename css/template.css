@@ -127,16 +127,16 @@ body {
 }
 
 /*Slider Cases*/
-.slider {
-  width: 80%;
-  margin: 0 auto;
+.slider-container button {
+  color: black;
+  border: 1px solid black;
 }
 
-.slider-item img {
+/* .slider-item img {
   width: 50%;
   height: 80%;
   border-radius: 10px;
-}
+} */
 
 @media (min-width: 769px) {
   .contact-form .form-row {
