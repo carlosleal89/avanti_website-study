@@ -629,6 +629,10 @@ video {
   margin-bottom: 1rem;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .ml-4 {
   margin-left: 1rem;
 }
@@ -637,8 +641,8 @@ video {
   margin-top: 1.5rem;
 }
 
-.mb-6 {
-  margin-bottom: 1.5rem;
+.ml-auto {
+  margin-left: auto;
 }
 
 .line-clamp-3 {
@@ -703,6 +707,10 @@ video {
 
 .items-center {
   align-items: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }
 
 .justify-center {
@@ -801,6 +809,18 @@ video {
 
 .pt-8 {
   padding-top: 2rem;
+}
+
+.pt-14 {
+  padding-top: 3.5rem;
+}
+
+.pr-10 {
+  padding-right: 2.5rem;
+}
+
+.pr-\[10\%\] {
+  padding-right: 10%;
 }
 
 .text-center {

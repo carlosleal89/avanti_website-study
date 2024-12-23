@@ -9,6 +9,7 @@ module.exports = {
         grayishblue: '#979A9E',
         royalblue: 'rgb(0 92 255 / <alpha-value>)',
         darkishgray: 'rgb(77 77 87 / <alpha-value>)',
+        silverlight: 'rgb(232 233 234 / <alpha-value>)',
       }
     },
   },

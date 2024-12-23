@@ -132,6 +132,17 @@ body {
   border: 1px solid black;
 }
 
+.custom-dots ul {
+  display: flex;
+}
+
+.slider-nav-buttons {
+  border: 1px solid rgb(232 233 234);
+  border-radius: 100px;
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
 /* .slider-item img {
   width: 50%;
   height: 80%;

@@ -18,9 +18,9 @@
         <?php get_template_part( '/template-parts/case-slider' ); ?>
       </div>
     </div>
-    <div class="buttons-dots text-black">
-      <div class="custom-arrows"></div>
-      <div class="custom-dots"></div>
+    <div class="buttons-dots flex gap-x-4 text-black justify-end ml-auto pt-14 pr-[10%]">
+      <div class="custom-dots flex"></div>
+      <div class="custom-arrows flex gap-x-4"></div>
     </div>
   </div>
 </section>

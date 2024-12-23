@@ -6,7 +6,9 @@ jQuery(document).ready(function($) {
       slidesToShow: 3,         // Quantidade de slides visíveis
       slidesToScroll: 1,       // Quantos slides rolar por vez
       appendArrows: $('.custom-arrows'), // prop que permite renderizar os botões prev/next fora do container principal
-      appendDots: $('.custom-dots'), // prop que permite renderizar os dots fora do container principal
+      appendDots: $('.custom-dots'), // prop que permite renderizar os dots fora do container principal,
+      prevArrow: '<button class="slider-nav-buttons"><i class="fas fa-chevron-left"></i></button>', //customiza os botões de navegação
+      nextArrow: '<button class="slider-nav-buttons"><i class="fas fa-chevron-right"></i></button>',
       responsive: [            // Configuração responsiva
           {
               breakpoint: 1024,
