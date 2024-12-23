@@ -18,8 +18,8 @@
         <?php get_template_part( '/template-parts/case-slider' ); ?>
       </div>
     </div>
-    <div class="buttons-dots flex gap-x-4 text-black justify-end ml-auto pt-14 pr-[10%]">
-      <div class="custom-dots flex"></div>
+    <div class="buttons-dots flex gap-x-4 text-black justify-end width-[50%] ml-[40%] pt-14 pr-[10%]">
+      <div class="custom-dots flex w-full"></div>
       <div class="custom-arrows flex gap-x-4"></div>
     </div>
   </div>

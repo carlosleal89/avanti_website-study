@@ -645,6 +645,10 @@ video {
   margin-left: auto;
 }
 
+.ml-\[40\%\] {
+  margin-left: 40%;
+}
+
 .line-clamp-3 {
   overflow: hidden;
   display: -webkit-box;
@@ -690,6 +694,10 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-\[50\%\] {
+  width: 50%;
 }
 
 .-translate-x-1\/2 {
