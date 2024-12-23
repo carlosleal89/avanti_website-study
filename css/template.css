@@ -138,10 +138,6 @@ body {
   border-radius: 10px;
 }
 
-.slider-item h3 {
-  color: black;
-}
-
 @media (min-width: 769px) {
   .contact-form .form-row {
     display: flex;

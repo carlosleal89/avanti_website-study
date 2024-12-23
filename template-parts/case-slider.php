@@ -1,16 +1,31 @@
-<div class="slider">
-  <div class="slider-item">
-    <a href="#">
-      <img src=<?php echo get_template_directory_uri() . "/assets/imgs/bob-brewer-1nGLVyB975g-unsplash.jpg" ?> alt="">
-      <h3>Imagem 1</h3>
-    </a>
-  </div>
-  <div class="slider-item">
-    <img src=<?php echo get_template_directory_uri() . "/assets/imgs/jez-timms-ck8ElD0DCbk-unsplash.jpg" ?> alt="">
-    <h3>Imagem 2</h3>
-  </div>
-  <div class="slider-item">
-    <img src=<?php echo get_template_directory_uri() . "/assets/imgs/macy-taylor-q0gVhAw6i_g-unsplash.jpg" ?> alt="">
-    <h3>Imagem 2</h3>
-  </div>
+<div class="slider-container">
+  <?php
+  $args = array(
+    'post_type' => 'post',
+    'category_name' => 'cases'
+  );
+
+  $query = new WP_Query($args);
+
+  if ( $query->have_posts() ) : ?>
+    <div class="slider">
+      <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+        <div class="slider-item ">
+          <a href=<?php echo get_permalink(); ?>>
+            <?php if ( has_post_thumbnail() ) : ?>
+              <div class="slider-image">
+                <img src=<?php echo get_the_post_thumbnail_url(null, 'full'); ?> alt="">
+              </div>
+            <?php endif; ?>
+            <p class="line-clamp-3 text-black mt-6"><?php the_title(); ?></p>
+          </a>
+        </div>
+      <?php endwhile; ?>
+    </div>
+  <?php else: ?>
+    <p>Sorry, no posts...</p>
+  <?php endif;
+  wp_reset_postdata(); //reseta a custom query
+  ?>
+
 </div>
