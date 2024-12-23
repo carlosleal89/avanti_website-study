@@ -5,7 +5,7 @@
 <section id="solutions" class="solutions flex justify-center">
   <?php get_template_part( '/template-parts/solutions' ); ?>
 </section>
-<section class="slider-cases overflow-hidden">
+<section class="slider-cases overflow-hidden py-10">
   <div class="flex flex-col py-10 md:py20 w-screen overflow-visible">
     <div class="cases-text-slider flex w-screen overflow-visible">
       <div class="cases-explanation w-[40%] flex flex-col md:items-center lg:items-end pb-8">
