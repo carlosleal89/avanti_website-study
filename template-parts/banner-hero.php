@@ -7,6 +7,9 @@
   <div class="form-contact-link-container flex pt-6">
     <a href="#contact-form" class="form-contact-link text-center py-3 px-8 bg-royalblue">Agendar uma apresentação</a>
   </div>
+  <div class="slider-icons-container pt-[50px] w-[80%] h-[200px]">
+    <?php get_template_part( '/template-parts/icons-slider' ); ?>
+  </div>
   <div class="main-section-link hidden md:flex justify-center items-center gap-y-4 absolute bottom-5 left-1/2 -translate-x-1/2 pb-20">
     <a href="#solutions" class="md:flex">
       <img src=<?php echo get_template_directory_uri() . "/assets/iconeBotaoBanner.png" ?> alt="Icone de botão que leva para sessão principal do site" >

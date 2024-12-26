@@ -1,11 +1,12 @@
 <section class="header-banner-hero min-h-screen relative w-full">
   <?php get_header(); ?>
   <?php get_template_part( '/template-parts/banner-hero' ); ?>
+  
 </section>
 <section id="solutions" class="solutions flex justify-center">
   <?php get_template_part( '/template-parts/solutions' ); ?>
 </section>
-<section class="slider-cases overflow-hidden py-10 px-[2rem] md:pr-0 md:py-20 w-screen">
+<section class="slider-cases overflow-hidden py-10 px-[2rem] md:pr-0 md:py-20">
   <div class="flex flex-col py-10 md:py20 w-screen overflow-visible">
     <div class="cases-text-slider flex flex-col md:gap-x-20 lg:flex-row w-screen overflow-visible">
       <div class="cases-explanation lg:w-[40%] flex flex-col md:items-center lg:items-end pb-8">
@@ -24,6 +25,7 @@
     </div>
   </div>
 </section>
+
 <section id="contact-form" class="contact-form py-10 md:py-20 px-8 ">
   <?php get_template_part( '/template-parts/contact-form' ); ?>
 </section>
