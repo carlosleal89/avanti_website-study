@@ -163,12 +163,6 @@ body {
   height: 2.75rem;
 }
 
-/* .slider-item img {
-  width: 50%;
-  height: 80%;
-  border-radius: 10px;
-} */
-
 @media (min-width: 769px) {
   .contact-form .form-row {
     display: flex;

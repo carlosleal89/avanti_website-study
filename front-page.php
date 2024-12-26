@@ -1,11 +1,11 @@
 <section class="header-banner-hero min-h-screen relative w-full">
   <?php get_header(); ?>
-  <?php get_template_part( '/template-parts/banner-hero' ); ?>
-  
+  <?php get_template_part( '/template-parts/banner-hero' ); ?>  
 </section>
 <section id="solutions" class="solutions flex justify-center">
   <?php get_template_part( '/template-parts/solutions' ); ?>
 </section>
+<!-- SLIDER CASES -->
 <section class="slider-cases overflow-hidden py-10 px-[2rem] md:pr-0 md:py-20">
   <div class="flex flex-col py-10 md:py20 w-screen overflow-visible">
     <div class="cases-text-slider flex flex-col md:gap-x-20 lg:flex-row w-screen overflow-visible">
@@ -20,12 +20,19 @@
       </div>
     </div>
     <div class="buttons-dots flex gap-x-4 text-black justify-end w-[100%] md:w-[50%] my-auto md:ml-[40%] pt-14 pr-[10%]">
-      <div class="custom-dots flex w-full"></div>
-      <div class="custom-arrows flex gap-x-4"></div>
+      <div id="custom-dots-cases" class="custom-dots flex w-full"></div>
+      <div id="custom-arrows-cases" class="custom-arrows flex gap-x-4"></div>
     </div>
   </div>
 </section>
-
+<!-- SLIDER TESTIMONIALS -->
+<section class="testimonials h-[600px] bg-black py-10 md:py-24">
+  <?php get_template_part( '/template-parts/testimonials-slider' ); ?>
+  <div class="container mx-auto px-[2rem] flex">
+      <div id="custom-dots-testimonials" class="custom-dots flex w-full"></div>
+      <div id="custom-arrows-testimonials" class="custom-arrows flex gap-x-4"></div>
+    </div>
+</section>
 <section id="contact-form" class="contact-form py-10 md:py-20 px-8 ">
   <?php get_template_part( '/template-parts/contact-form' ); ?>
 </section>

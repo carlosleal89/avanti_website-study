@@ -23,7 +23,7 @@
       <?php endwhile; ?>
     </div>
   <?php else: ?>
-    <p>Sorry, no posts...</p>
+    <p>Sorry, no slides...</p>
   <?php endif;
   wp_reset_postdata(); //reseta a custom query
   ?>

@@ -1,45 +1,16 @@
 <div class="slider-icons-container">  
-  <div class="slider-icons flex gap-x-2">
-    <div class="slider-icons-item">
-      <div class="slider-icons-image w-full">
-        <img class="h-14 max-w-32 object-contain mx-auto px-2" src=<?php echo get_template_directory_uri() . "/assets/icons/AmPm.png" ?> alt="">
-      </div>
+  <?php
+    $slider_images = get_post_meta(get_the_ID(), 'slider_images', true);
+    if ($slider_images): ?>
+    <div class="slider-icons flex gap-x-2">
+      <?php foreach ($slider_images as $image):
+        $image_url = wp_get_attachment_image_url($image['id'], 'full') ?>
+        <div class="slider-icons-item">
+          <div class="slider-icons-image w-full">
+            <img class="h-14 max-w-32 object-contain mx-auto px-2" src=<?php echo esc_url($image_url); ?> alt="">
+          </div>
+        </div>
+      <?php endforeach; ?>
     </div>
-    <div class="slider-icons-item ">
-      <div class="slider-icons-image w-full  ">
-        <img class="h-14 max-w-32 object-contain mx-auto px-2" src=<?php echo get_template_directory_uri() . "/assets/icons/Intelbras.png" ?> alt="">
-      </div>
-    </div>
-    <div class="slider-icons-item ">
-      <div class="slider-icons-image w-full">
-        <img class="h-14 max-w-32 object-contain mx-auto px-2" src=<?php echo get_template_directory_uri() . "/assets/icons/Kopenhagen.png" ?> alt="">
-      </div>
-    </div>
-    <div class="slider-icons-item ">
-      <div class="slider-icons-image w-full  ">
-        <img class="h-14 max-w-32 object-contain mx-auto px-2" src=<?php echo get_template_directory_uri() . "/assets/icons/Logo-Farmacias-Sao-Joao-Positiva.png" ?> alt="">
-      </div>   
-    </div>
-    <div class="slider-icons-item ">
-      <div class="slider-icons-image w-full  ">
-        <img class="h-14 max-w-32 object-contain mx-auto px-2" src=<?php echo get_template_directory_uri() . "/assets/icons/logo-negativo.png" ?> alt="">
-      </div>   
-    </div>
-    <div class="slider-icons-item ">
-      <div class="slider-icons-image w-full  ">
-        <img class="h-14 max-w-32 object-contain mx-auto px-2" src=<?php echo get_template_directory_uri() . "/assets/icons/Loungerie.png" ?> alt="">
-      </div>   
-    </div>
-    <div class="slider-icons-item ">
-      <div class="slider-icons-image w-full  ">
-        <img class="h-14 max-w-32 object-contain mx-auto px-2" src=<?php echo get_template_directory_uri() . "/assets/icons/Orfeu-Horizontal-Negativo-PB.png" ?> alt="">
-      </div>   
-    </div>
-    <div class="slider-icons-item ">
-      <div class="slider-icons-image w-full  ">
-        <img class="h-14 max-w-32 object-contain mx-auto px-2" src=<?php echo get_template_directory_uri() . "/assets/icons/Smiles.png" ?> alt="">
-      </div>   
-    </div>
-    </div>
-  </div>
+  <?php endif; ?>
 </div>
