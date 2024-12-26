@@ -4,8 +4,8 @@ jQuery(document).ready(function($) {
       speed: 500,              // Velocidade da transição
       slidesToShow: 7,         // Quantidade de slides visíveis
       slidesToScroll: 1,
-    //   autoplay: true,
-    //   autoplaySpeed: 1500,
+      autoplay: true,
+      autoplaySpeed: 1500,
       dots: false,
       arrows: false,
       responsive: [            // Configuração responsiva
