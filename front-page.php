@@ -2,6 +2,7 @@
   <?php get_header(); ?>
   <?php get_template_part( '/template-parts/banner-hero' ); ?>  
 </section>
+<!-- SOLUTIONS -->
 <section id="solutions" class="solutions flex justify-center">
   <?php get_template_part( '/template-parts/solutions' ); ?>
 </section>
@@ -33,6 +34,7 @@
       <div id="custom-arrows-testimonials" class="custom-arrows flex gap-x-4"></div>
     </div>
 </section>
+<!-- FORM DE CONTATO -->
 <section id="contact-form" class="contact-form py-10 md:py-20 px-8 ">
   <?php get_template_part( '/template-parts/contact-form' ); ?>
 </section>
