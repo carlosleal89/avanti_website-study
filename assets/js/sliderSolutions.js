@@ -5,10 +5,10 @@ jQuery(document).ready(function($) {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1, 
-      appendArrows: $('#custom-arrows-solutions'),
+    //   appendArrows: $('#custom-arrows-solutions'),
       appendDots: $('#custom-dots-solutions'),
-      prevArrow: '<button class="slider-nav-buttons"><i class="fas fa-chevron-left"></i></button>',
-      nextArrow: '<button class="slider-nav-buttons"><i class="fas fa-chevron-right"></i></button>',
+      prevArrow: $('#solutions-prev-arrow'),
+      nextArrow: $('#solutions-next-arrow'),
       responsive: [
           {
               breakpoint: 1024,
@@ -23,5 +23,13 @@ jQuery(document).ready(function($) {
               }
           }
       ]
+  });
+
+  $('.slider-solutions').on('afterChange', function (event, slick, currentSlide) {
+    $('.solutions-card').removeClass('active');
+
+    $(`.solutions-card[data-slide="${currentSlide}"]`).addClass('active');
+    console.log(currentSlide);
+    
   });
 });

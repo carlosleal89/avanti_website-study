@@ -163,6 +163,13 @@ body {
   height: 2.75rem;
 }
 
+/*Slider Solutions*/
+.solutions-card.active p, .solutions-card.active img {
+  filter: none;
+  color: blue;
+}
+
+
 @media (min-width: 769px) {
   .contact-form .form-row {
     display: flex;

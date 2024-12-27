@@ -1,24 +1,31 @@
 <div class="solutions-card-container flex gap-x-4 justify-evenly container mx-auto">
-  <div class="solutions-card flex flex-col items-center" data-slide="1">
-    <img class="w-[20px]" src=<?php echo get_template_directory_uri() . "/assets/imgs/solutions-slider/basket-modern-circle.svg" ?> alt="">
+  <div class="solutions-card flex flex-col items-center py-6 md:py-8 cursor pointer active" data-slide="0">
+    <img class="w-[20px] grayscale" src=<?php echo get_template_directory_uri() . "/assets/imgs/solutions-slider/basket-modern-circle.svg" ?> alt="">
     <p class="text-black">Digital Sales</p>
-    <p class="text-black">Evolua suas vendas</p>
+    <p class="!text-black">Evolua suas vendas</p>
   </div>
-  <div class="solutions-card flex flex-col items-center" data-slide="2">
-    <img class="w-[20px]" src=<?php echo get_template_directory_uri() . "/assets/imgs/solutions-slider/basket-refund.svg" ?> alt="">
+  <div class="solutions-card flex flex-col items-center py-6 md:py-8 cursor pointer" data-slide="1">
+    <img class="w-[20px] grayscale" src=<?php echo get_template_directory_uri() . "/assets/imgs/solutions-slider/basket-refund.svg" ?> alt="">
     <p class="text-black">Sales Performance</p>
-    <p class="text-black">Melhore o desempenho</p>
+    <p class="!text-black">Melhore o desempenho</p>
   </div>
-  <div class="solutions-card flex flex-col items-center" data-slide="3">
-    <img class="w-[20px]" src=<?php echo get_template_directory_uri() . "/assets/imgs/solutions-slider/shopping-bag-favorite-heart.svg" ?> alt="">
+  <div class="solutions-card flex flex-col items-center py-6 md:py-8 cursor pointer" data-slide="2">
+    <img class="w-[20px] grayscale" src=<?php echo get_template_directory_uri() . "/assets/imgs/solutions-slider/shopping-bag-favorite-heart.svg" ?> alt="">
     <p class="text-black">Experience</p>
-    <p class="text-black">Esperiência inesquecível e garantida</p>
+    <p class="!text-black">Esperiência inesquecível e garantida</p>
   </div>
 </div>
 <!-- NAV BUTTON AND DOTS -->
 <div class="nav-dots-container">
-  <div id="custom-dots-solutions" class="custom-dots flex w-full"></div>
-  <div id="custom-arrows-solutions" class="custom-arrows flex gap-x-4"></div>
+  <div id="custom-arrows-solutions" class="custom-arrows flex gap-x-4">
+    <button id="solutions-prev-arrow" class="text-black">
+      <img src=<?php echo get_template_directory_uri() . "/assets/imgs/solutions-slider/ArrowSoluLeft.png" ?> alt="">
+    </button>
+    <div id="custom-dots-solutions" class="custom-dots flex w-full"></div>
+    <button id="solutions-next-arrow" class="text-black">
+      <img src=<?php echo get_template_directory_uri() . "/assets/imgs/solutions-slider/ArrowSoluRight.png" ?> alt="">
+    </button>
+  </div>
 </div>
 <!-- SLIDER -->
 <div class="slider-solutions-container container">
