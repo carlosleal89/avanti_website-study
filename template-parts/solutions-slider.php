@@ -28,32 +28,32 @@
   </div>
 </div>
 <!-- SLIDER -->
-<div class="slider-solutions-container container">
+<div class="slider-solutions-container container py-8 md:py-20 md:px-8">
   <div class="slider-solutions">
     <div class="testimonial-slider-item flex">
-      <div class="flex gap-x-4 justify-center">
+      <div class="flex flex-col md:flex-row gap-y-5 md:gap-x-8 justify-center items-center p-8 md:max-w-[80%] mx-auto">
         <div id="implatacao" class="flex flex-col">
-          <div class="img-title-solutions flex">
-            <img class="w-[50px]" src=<?php echo get_template_directory_uri() . "/assets/imgs/solutions-slider/implatacao.png" ?> alt="">
-            <p class="text-black">Implatação</p>
+          <div class="img-title-solutions flex pb-4 md:pb-6 items-center">
+            <img class="w-[30px]" src=<?php echo get_template_directory_uri() . "/assets/imgs/solutions-slider/implatacao.png" ?> alt="">
+            <p class="text-black text-xl ml-2">Implantação</p>
           </div>
-          <div class="card-business">
-            <a class="text-black" href="">Flagship Store</a>
-            <a class="text-black" href="">Marketplace</a>
-            <a class="text-black" href="">D2C</a>
-            <a class="text-black" href="">B2E</a>
-            <a class="text-black" href="">B2C</a>
+          <div class="card-business flex flex-wrap gap-2 md:gap-4 max-w-[80%]">
+            <a class="text-black text-xs md:text-xl p-2 px-4 bg-lightblue" href="">Flagship Store</a>
+            <a class="text-black text-xs md:text-xl p-2 px-4 bg-lightblue" href="">Marketplace</a>
+            <a class="text-black text-xs md:text-xl p-2 px-4 bg-lightblue" href="">D2C</a>
+            <a class="text-black text-xs md:text-xl p-2 px-4 bg-lightblue" href="">B2E</a>
+            <a class="text-black text-xs md:text-xl p-2 px-4 bg-lightblue" href="">B2C</a>
           </div>
         </div>
         <div id="native-app" class="flex flex-col">
-          <div class="img-title-solutions flex">
-            <img class="w-[50px]" src=<?php echo get_template_directory_uri() . "/assets/imgs/solutions-slider/nativeApp.png" ?> alt="">
-            <p class="text-black">Native App</p>
+          <div class="img-title-solutions flex pb-4 md:pb-6 items-center">
+            <img class="w-[30px]" src=<?php echo get_template_directory_uri() . "/assets/imgs/solutions-slider/nativeApp.png" ?> alt="">
+            <p class="text-black text-xl ml-2">Native App</p>
           </div>
-          <div class="card-business">
-            <a class="text-black" href="">Soluções customizadas</a>
-            <a class="text-black" href="">Acelerador</a>
-            <a class="text-black" href="">Super App</a>
+          <div class="card-business flex flex-wrap gap-2 md:gap-4 max-w-[80%]">
+            <a class="text-black text-xs md:text-xl p-2 px-4 bg-lightblue" href="">Soluções customizadas</a>
+            <a class="text-black text-xs md:text-xl p-2 px-4 bg-lightblue" href="">Acelerador</a>
+            <a class="text-black text-xs md:text-xl p-2 px-4 bg-lightblue" href="">Super App</a>
           </div>
         </div>
       </div>
