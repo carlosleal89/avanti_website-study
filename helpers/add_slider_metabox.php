@@ -16,14 +16,13 @@ function register_slider_metabox($id, $title, $post_type = 'page') {
 // Registrar meta boxes para diferentes sliders
 function add_custom_slider_metaboxes() {
     register_slider_metabox('slider_images', 'Imagens do Carrossel de Ícones', 'page');
-    register_slider_metabox('another_slider', 'Outro Slider de Exemplo', 'page');
+    register_slider_metabox('slider_testimonials', 'Imagens do Slider de Depoimentos', 'page');
 }
 add_action('add_meta_boxes', 'add_custom_slider_metaboxes');
 
 // Função genérica de renderização do meta box
 function render_slider_metabox_callback($post, $meta_key) {
     $slider_images = get_post_meta($post->ID, $meta_key, true) ?: []; //recupera os metadados associados ao post atual com base na meta_key;
-    // wp_nonce_field("{$meta_key}_nonce", "{$meta_key}_nonce_field");
     ?> <!-- fecha a tag php do inicio para trabalhar apenas com html. sem esse fechamento teria que usar funções de php como echo para retorna o html -->
     <!-- CRIA A INTERFACE NO PAINEL DE ADMIN -->
     <div id="<?php echo esc_attr($meta_key); ?>-container" style="background: lightgray;">
@@ -46,7 +45,7 @@ function render_slider_metabox_callback($post, $meta_key) {
             const addButton = document.getElementById('add-<?php echo esc_attr($meta_key); ?>-image');
             let mediaUploader;
 
-            // Adiciona nova imagem
+            //Adiciona nova imagem
             addButton.addEventListener('click', () => {
                 if (!mediaUploader) {
                     mediaUploader = wp.media({
@@ -107,8 +106,7 @@ function render_slider_metabox_callback($post, $meta_key) {
 
 // Função genérica para salvar sliders
 function save_slider_metabox($post_id, $meta_key) {
-
-    // evita que o wordpress salve os dados automaticamente. vai salva somente quando clicar em save
+    // evita que o wordpress salve os dados automaticamente. vai salvar somente quando clicar em save
     if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
         return; 
     }
@@ -120,6 +118,6 @@ function save_slider_metabox($post_id, $meta_key) {
 // Salvar diferentes sliders
 function save_custom_sliders($post_id) {
     save_slider_metabox($post_id, 'slider_images');
-    save_slider_metabox($post_id, 'another_slider');
+    save_slider_metabox($post_id, 'slider_testimonials');
 }
 add_action('save_post', 'save_custom_sliders');

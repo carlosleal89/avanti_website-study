@@ -1,8 +1,12 @@
 <div class="slider-testimonials-container container mx-auto px-[2rem]">
     <div class="slider-testimonials">
+      <?php
+        $slider_images = get_post_meta(get_the_ID(), 'slider_testimonials', true);
+      ?>
         <div class="slider-testimonials-item">
           <div class="slider-testimonials-image h-[77px] mb-8">
-            <img class="w-60 object-cover" src=<?php echo get_template_directory_uri() . "/assets/icons/Logo-Farmacias-Sao-Joao-Positiva.png" ?> alt="">
+            <?php $image_url = wp_get_attachment_image_url($slider_images[0]['id'], 'full'); ?>
+            <img class="w-60 object-cover" src=<?php echo esc_url($image_url); ?> alt="">
           </div>
           <div class="testimonial">
             <h1 class="text-white mb-8 font-normal text-xl">

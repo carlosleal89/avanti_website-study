@@ -14,7 +14,6 @@ add_action('add_meta_boxes', 'slider_images_metabox');
 
 function slider_images_metabox_callback($post) {
   $slider_images = get_post_meta($post->ID, 'slider_images', true) ?: [];
-  // wp_nonce_field('slider_images_nonce', 'slider_images_nonce_field');
   ?>
   <div id="slider-images-container" style="background: lightgray;">
       <?php if (!empty($slider_images)): ?>

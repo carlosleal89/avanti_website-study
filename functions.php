@@ -67,7 +67,7 @@ function enqueue_slick_slider() {
 add_action('wp_enqueue_scripts', 'enqueue_slick_slider');
 
 /*ADICIONA METABOX AO PAINEL DE ADMIN */
-require_once get_template_directory() . '/helpers/metabox_test.php';
+require_once get_template_directory() . '/helpers/add_slider_metabox.php';
 
 
 
