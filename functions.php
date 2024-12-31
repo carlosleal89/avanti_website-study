@@ -56,7 +56,6 @@ function enqueue_slick_slider() {
   wp_enqueue_script('jquery');
 
   wp_enqueue_style('slick-css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css');
-  // wp_enqueue_style('slick-theme-css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css'); Necessário?
 
   wp_enqueue_script('slick-js', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js', array('jquery'), null, true);
 
@@ -68,7 +67,6 @@ function enqueue_slick_slider() {
 add_action('wp_enqueue_scripts', 'enqueue_slick_slider');
 
 /*ADICIONA METABOX AO PAINEL DE ADMIN */
-
 function slider_images_metabox() {
   add_meta_box(
       'slider_images', 
@@ -81,9 +79,25 @@ function slider_images_metabox() {
 }
 add_action('add_meta_boxes', 'slider_images_metabox');
 
+// function slider_solutions_metabox() {
+//   add_meta_box(
+//       'slider_images_solutions', 
+//       'Imagens do Carrossel de soluções', 
+//       'slider_solutions_metabox_callback', 
+//       'page', 
+//       'normal', 
+//       'high'
+//   );
+// }
+// add_action('add_meta_boxes', 'slider_images_metabox');
+
+// function slider_solutions_metabox_callback() {
+
+// }
+
 function slider_images_metabox_callback($post) {
   $slider_images = get_post_meta($post->ID, 'slider_images', true) ?: [];
-  wp_nonce_field('slider_images_nonce', 'slider_images_nonce_field');
+  // wp_nonce_field('slider_images_nonce', 'slider_images_nonce_field');
   ?>
   <div id="slider-images-container" style="background: lightgray;">
       <?php if (!empty($slider_images)): ?>

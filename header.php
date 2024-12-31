@@ -22,6 +22,7 @@
           wp_nav_menu( array(
                             'theme_location' => 'header_menu',
                             'container' => 'none',
+                            'menu_class' => 'main_menu_header flex gap-x-8 items-center',
                             'walker' => new Menu_Walker ) );
         ?> <!--container: none força a ul como filho do nav --> 
       </nav>

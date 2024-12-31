@@ -6,11 +6,6 @@ body {
   color: white;
 }
 
-.menu {
-  display: flex;
-  gap: 20px
-}
-
 .container {
   max-width: 1280px; /*?????? Necessário estilizar aqui ou usar classes do tailwind?*/
 }
@@ -33,21 +28,45 @@ body {
 .submenu-servicos {  
   position: absolute;
   z-index: 50;
-  top: 50px;
   height: 200px;
   width: 300px;
-  padding-top: 50px;
+  padding-top: 20px;
   display: none;
 }
 
-.test {
+.submenu-header {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
   background-color: #151A20;
-  padding: 10px;
+  padding: 20px 0 20px 10px;
   border-radius: 10px;
+}
+
+.menu-item:not(li:first-child):hover {
+  color: rgb(0 92 255);
+  transition: 0.5s ease, transform 0.5s ease;
 }
 
 #menu-menu_header :first-child:hover .submenu-servicos {
   display: block;
+}
+
+#menu-menu_header li:last-child {
+  border: 1px solid gray;
+  border-radius: 100px;
+  padding: .50rem 1rem;
+}
+
+.submenu-servicos li:last-child {
+  border: none !important;
+  pointer-events: none !important;
+  padding: 0 !important;
+}
+
+.submenu-servicos .menu-item:hover {
+  color: rgb(0 92 255);
+  transition: 0.5s ease, transform 0.5s ease;
 }
 
 

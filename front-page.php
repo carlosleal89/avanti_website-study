@@ -34,6 +34,10 @@
       <div id="custom-arrows-testimonials" class="custom-arrows flex gap-x-4"></div>
     </div>
 </section>
+<!-- ECOSSISTEMA AVANTI -->
+<section id="avanti-ecosystem" class="">
+  <?php get_template_part('/template-parts/avanti-ecosystem') ?>
+</section>
 <!-- FORM DE CONTATO -->
 <section id="contact-form" class="contact-form py-10 md:py-20 px-8 ">
   <?php get_template_part( '/template-parts/contact-form' ); ?>
