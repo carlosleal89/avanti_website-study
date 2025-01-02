@@ -197,17 +197,24 @@ body {
   gap: 3px
 }
 
-.testimonials .custom-dots .slick-dots li button {
-  /* color: #1d242d; */
-  background-color: #1d242d;
+.custom-dot-testimonial {
+  height: 3px;
+  background-color: gray;
+  border-radius: 5px;
+  transition: background 0.3s;
 }
 
-.testimonials .custom-dots .slick-dots .slick-active button {
-  background-color: blue;  
+#custom-dots-testimonials .slick-dots .slick-active .custom-dot-testimonial {
+  background-color: blue;
+}
+
+#custom-dots-testimonials .slick-dots {
+  margin: 0;
 }
 
 
 @media (min-width: 769px) {
+  /*Contact Form*/
   .contact-form .form-row {
     display: flex;
     justify-content: space-between;
