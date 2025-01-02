@@ -69,5 +69,23 @@ add_action('wp_enqueue_scripts', 'enqueue_slick_slider');
 /*ADICIONA METABOX AO PAINEL DE ADMIN */
 require_once get_template_directory() . '/helpers/add_slider_metabox.php';
 
+function register_slider_testimonials_cpt() {
+  register_post_type('testimonial_slider',
+    array(
+      'labels' => array(
+        'name' => 'Slides de Depoimentos',
+        'singular_name' => 'Slide de Depoimento',
+        'add_new' => 'Adicionar Novo Slide',
+        'add_new_title' => 'Adicionar Novo Slide'
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'supports' => array('title', 'editor', 'thumbnail'),
+    )
+    );
+}
+
+add_action('init', 'register_slider_testimonials_cpt');
+
 
 

@@ -11,6 +11,8 @@ module.exports = {
         lightblue: 'rgb(230 239 255 / <alpha-value>)',
         darkishgray: 'rgb(77 77 87 / <alpha-value>)',
         silverlight: 'rgb(232 233 234 / <alpha-value>)',
+        darkblack: 'rgb(21 24 27 / <alpha-value>)',
+        slategray: 'rgb(104 108 114 / <alpha-value>)',
       }
     },
   },

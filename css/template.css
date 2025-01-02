@@ -192,6 +192,20 @@ body {
   border-radius: 999px;
 }
 
+/*Slider Testimonials*/
+.testimonials .custom-dots ul {
+  gap: 3px
+}
+
+.testimonials .custom-dots .slick-dots li button {
+  /* color: #1d242d; */
+  background-color: #1d242d;
+}
+
+.testimonials .custom-dots .slick-dots .slick-active button {
+  background-color: blue;  
+}
+
 
 @media (min-width: 769px) {
   .contact-form .form-row {

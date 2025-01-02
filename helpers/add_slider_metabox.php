@@ -23,7 +23,7 @@ add_action('add_meta_boxes', 'add_custom_slider_metaboxes');
 // Função genérica de renderização do meta box
 function render_slider_metabox_callback($post, $meta_key) {
     $slider_images = get_post_meta($post->ID, $meta_key, true) ?: []; //recupera os metadados associados ao post atual com base na meta_key;
-    ?> <!-- fecha a tag php do inicio para trabalhar apenas com html. sem esse fechamento teria que usar funções de php como echo para retorna o html -->
+    ?> <!-- fecha a tag php do inicio para trabalhar apenas com html. sem esse fechamento teria que usar funções de php como echo para retornar o html -->
     <!-- CRIA A INTERFACE NO PAINEL DE ADMIN -->
     <div id="<?php echo esc_attr($meta_key); ?>-container" style="background: lightgray;">
         <?php if (!empty($slider_images)): ?> <!--se tiver recuperado imagens do post, vai renderizar cada uma com thumbnail e botões necessários -->

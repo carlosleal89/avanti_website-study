@@ -27,11 +27,18 @@
   </div>
 </section>
 <!-- SLIDER TESTIMONIALS -->
-<section class="testimonials h-[600px] bg-black py-10 md:py-24">
+<section class="testimonials h-[550px] bg-darkblack py-10 md:py-24">
   <?php get_template_part( '/template-parts/testimonials-slider' ); ?>
   <div class="container mx-auto px-[2rem] flex">
       <div id="custom-dots-testimonials" class="custom-dots flex w-full"></div>
-      <div id="custom-arrows-testimonials" class="custom-arrows flex gap-x-4"></div>
+      <div class="flex gap-x-4">
+        <button id="testimonials-prev-arrow" class="text-black">
+          <img src=<?php echo get_template_directory_uri() . "/assets/imgs/testimonials-slider/buttonSliderLeft.png" ?> alt="">
+        </button>
+        <button id="testimonials-next-arrow" class="text-black">
+          <img src=<?php echo get_template_directory_uri() . "/assets/imgs/testimonials-slider/buttonSliderRight.png" ?> alt="">
+        </button>
+      </div>
     </div>
 </section>
 <!-- ECOSSISTEMA AVANTI -->
