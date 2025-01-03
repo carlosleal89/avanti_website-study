@@ -16,7 +16,7 @@ function register_slider_metabox($id, $title, $post_type = 'page') {
 // Registrar meta boxes para diferentes sliders
 function add_custom_slider_metaboxes() {
     register_slider_metabox('slider_images', 'Imagens do Carrossel de Ícones', 'page');
-    register_slider_metabox('slider_testimonials', 'Imagens do Slider de Depoimentos', 'page');
+    // register_slider_metabox('slider_testimonials', 'Imagens do Slider de Depoimentos', 'page');
 }
 add_action('add_meta_boxes', 'add_custom_slider_metaboxes');
 
@@ -118,6 +118,6 @@ function save_slider_metabox($post_id, $meta_key) {
 // Salvar diferentes sliders
 function save_custom_sliders($post_id) {
     save_slider_metabox($post_id, 'slider_images');
-    save_slider_metabox($post_id, 'slider_testimonials');
+    // save_slider_metabox($post_id, 'slider_testimonials');
 }
 add_action('save_post', 'save_custom_sliders');

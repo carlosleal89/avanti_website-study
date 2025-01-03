@@ -1,31 +1,43 @@
-  <footer class="footer px-10 mx-auto">
-    <div class="logo_info_container container flex flex-col py-10 mx-auto justify-between">
+  <footer class="footer py-10 md:py-20 mx-auto">
+    <div class="logo_info_container container flex flex-col px-12 mx-auto justify-between">
       <div class="flex flex-col lg:flex-row justify-between pb-20">
         <div class="logo_container flex pb-8">
           <img src=<?php echo get_template_directory_uri() . "/assets/avantiLogo.png" ?> alt="Logo da Avanti" class="xl:w-[148px] xl:h-[27px] sm:w-[124px] sm:h-[22px] relative z-[100]">
         </div>
         <div class="flex flex-col lg:flex-row gap-x-8">          
           <div class="addresses_container flex flex-col pb-8 gap-x-8">
-            <div class="address_container flex flex-col pb-4 text-grayishblue text-sm">
-              <h1 class="text-white mb-1"><?php the_field('cidade') ?> - <?php the_field('estado') ?></h1>
-              <p><?php the_field('logradouro'); ?>, <?php the_field('numero') ?></p>
+            <div class="address_container flex flex-col pb-4 ">
+              <!-- <h1 class="text-white mb-1"><?php the_field('cidade') ?> - <?php the_field('estado') ?></h1>
+              <p><?php the_field('teste_campo'); ?>, <?php the_field('numero') ?></p>
               <p><?php the_field('complemento') ?></p>
-              <p><?php the_field('bairro') ?> - CEP <?php the_field('cep') ?></p>
+              <p><?php the_field('bairro') ?> - CEP <?php the_field('cep') ?></p> -->
+              <?php if (is_active_sidebar('footer_addresses')) : ?>
+                  <?php dynamic_sidebar('footer_addresses'); ?>
+              <?php endif; ?>
             </div>
-            <div class="address_container2 flex flex-col pb-4 text-grayishblue text-sm">
-              <h1 class="text-white mb-1"><?php the_field('cidade2') ?> - <?php the_field('estado2') ?></h1>
+            <div class="address_container2 flex flex-col pb-4">
+              <!-- <h1 class="text-white mb-1"><?php the_field('cidade2') ?> - <?php the_field('estado2') ?></h1>
               <p><?php the_field('logradouro2') ?>, <?php the_field('numero2') ?></p>
               <p><?php the_field('complemento2') ?></p>
-              <p><?php the_field('bairro2') ?> - CEP <?php the_field('cep2') ?></p>
+              <p><?php the_field('bairro2') ?> - CEP <?php the_field('cep2') ?></p> -->
+              <?php if (is_active_sidebar('footer_addresses2')) : ?>
+                  <?php dynamic_sidebar('footer_addresses2'); ?>
+              <?php endif; ?>
             </div>
-            <p class="text-sm text-grayishblue"><?php the_field('email_de_contato') ?></p>
+            <!-- <p class="text-sm text-grayishblue"><?php the_field('email_de_contato') ?></p> -->
+            <?php if (is_active_sidebar('footer_email')) : ?>
+                <?php dynamic_sidebar('footer_email'); ?>
+            <?php endif; ?>
           </div>          
-          <div class="links_container flex flex-col text-sm text-grayishblue pb-8">
-            <h1 class="text-white mb-1">
+          <div class="links_container flex flex-col pb-8">
+            <!-- <h1 class="text-white mb-1">
               Soluções para seu E-commerce
-            </h1>
+            </h1> -->
+            <?php if (is_active_sidebar('footer_solutions_title')) : ?>
+                <?php dynamic_sidebar('footer_solutions_title'); ?>
+            <?php endif; ?>
             <div class="flex flex-col gap-y-4 ">
-              <p>
+              <!-- <p>
                 <a href=<?php the_field('link1') ?> class="flex items-center gap-x-2">
                   <?php the_field('texto_link_1'); ?>
                   <img src=<?php echo get_template_directory_uri() . "/assets/extern-link.svg" ?> alt="link externo">
@@ -39,10 +51,13 @@
               </p>
               <p>
                 <a href=<?php the_field('link3') ?> class="flex items-center gap-x-2">
-                  <?php the_field('texto_link_3'); ?>
+                  <?php the_field('test212'); ?>
                   <img src=<?php echo get_template_directory_uri() . "/assets/extern-link.svg" ?> alt="link externo">
                 </a>
-              </p>
+              </p> -->
+              <?php if (is_active_sidebar('footer_solutions_links')) : ?>
+                <?php dynamic_sidebar('footer_solutions_links'); ?>
+              <?php endif; ?>
             </div>
           </div>
           <div class="avanti-links-container flex flex-col text-sm text-grayishblue">

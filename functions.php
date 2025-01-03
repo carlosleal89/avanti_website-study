@@ -88,4 +88,79 @@ function register_slider_testimonials_cpt() {
 add_action('init', 'register_slider_testimonials_cpt');
 
 
+//REGISTRA OS WIDGETS DO FOOTER
+
+function register_footer_widgets() {  
+
+  // Widget para endereços
+  register_sidebar(array(
+      'name'          => 'Endereços do Footer',
+      'id'            => 'footer_addresses',
+      'before_widget' => '<div class="widget footer-widget">',
+      'after_widget'  => '</div>',
+      'before_title'  => '<h2 class="widget-title">',
+      'after_title'   => '</h2>',
+  ));
+
+  register_sidebar(array(
+    'name'          => 'Endereços do Footer 2',
+    'id'            => 'footer_addresses2',
+    'before_widget' => '<div class="widget footer-widget">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h2 class="widget-title">',
+    'after_title'   => '</h2>',
+  ));
+
+  register_sidebar(array(
+    'name'          => 'Emails de contato',
+    'id'            => 'footer_email',
+    'before_widget' => '<div class="widget footer-widget">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h2 class="widget-title">',
+    'after_title'   => '</h2>',
+  ));
+
+  // Widget para links de soluções
+  register_sidebar(array(
+    'name'          => 'Titulo sessão de links',
+    'id'            => 'footer_solutions_title',
+    'before_widget' => '<div class="widget footer-widget">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h2 class="widget-title">',
+    'after_title'   => '</h2>',
+  ));
+
+  register_sidebar(array(
+      'name'          => 'Links de Soluções do Footer',
+      'id'            => 'footer_solutions_links',
+      'before_widget' => '<div class="widget footer-widget">',
+      'after_widget'  => '</div>',
+      'before_title'  => '<h2 class="widget-title">',
+      'after_title'   => '</h2>',
+  ));
+
+  // Widget para links Avanti
+  register_sidebar(array(
+      'name'          => 'Links da Avanti',
+      'id'            => 'footer_avanti_links',
+      'before_widget' => '<div class="widget footer-widget">',
+      'after_widget'  => '</div>',
+      'before_title'  => '<h2 class="widget-title">',
+      'after_title'   => '</h2>',
+  ));
+
+  // Widget para informações e redes sociais
+  register_sidebar(array(
+      'name'          => 'Informações e Redes Sociais do Footer',
+      'id'            => 'footer_social_info',
+      'before_widget' => '<div class="widget footer-widget">',
+      'after_widget'  => '</div>',
+      'before_title'  => '<h2 class="widget-title">',
+      'after_title'   => '</h2>',
+  ));
+}
+add_action('widgets_init', 'register_footer_widgets');
+
+
+
 
