@@ -1,6 +1,6 @@
 <?php
-add_filter('show_admin_bar', '__return_false'); //remove a barra de admin do topo da página
-
+//remove a barra de admin do topo da página
+add_filter('show_admin_bar', '__return_false'); 
 
 function wptheme_config() {
   //habilita os thumbnails
@@ -11,7 +11,6 @@ function wptheme_config() {
     'header_menu', 'Header Menu'
   );
 }
-
 add_action( 'after_setup_theme', 'wptheme_config', 0);
 
 //adiciona o Tailwind e CSS ao tema.
@@ -19,7 +18,6 @@ function enqueue_styles() {
   wp_enqueue_style('tailwind-css', get_template_directory_uri() . '/src/output.css');
   wp_enqueue_style('css-custom-styles', get_template_directory_uri() . '/css/template.css');
 }
-
 add_action('wp_enqueue_scripts', 'enqueue_styles');
 
 //adiciona font-awesome
@@ -32,7 +30,6 @@ function enqueue_font_awesome() {
     true
   );  
 }
-
 add_action('wp_enqueue_scripts', 'enqueue_font_awesome');
 
 //adiciona script pro menu hamburguer
@@ -45,7 +42,6 @@ function enqueue_menu_toggle() {
     true
   );
 }
-
 add_action('wp_enqueue_scripts', 'enqueue_menu_toggle');
 
 //Adiciona arquivo walker.php
@@ -69,7 +65,9 @@ add_action('wp_enqueue_scripts', 'enqueue_slick_slider');
 /*ADICIONA METABOX AO PAINEL DE ADMIN */
 require_once get_template_directory() . '/helpers/add_slider_metabox.php';
 
-function register_slider_testimonials_cpt() {
+
+//ADICIONA CUSTOM POST TYPE
+function register_sliders_cpt() {
   register_post_type('testimonial_slider',
     array(
       'labels' => array(
@@ -82,72 +80,36 @@ function register_slider_testimonials_cpt() {
       'has_archive' => true,
       'supports' => array('title', 'editor', 'thumbnail'),
     )
-    );
-}
+  );
 
-add_action('init', 'register_slider_testimonials_cpt');
+  register_post_type('solutions_slider',
+    array(
+      'labels' => array(
+        'name' => 'Slides de Soluções',
+        'singular_name' => 'Slide de Soluções',
+        'add_new' => 'Adicionar Novo Slide',
+        'add_new_title' => 'Adicionar Novo Slide'
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'supports' => array('title', 'editor', 'thumbnail'),
+    )
+  );
+}
+add_action('init', 'register_sliders_cpt');
 
 
 //REGISTRA OS WIDGETS DO FOOTER
-
 function register_footer_widgets() {  
 
-  // Widget para endereços
-  register_sidebar(array(
-      'name'          => 'Endereços do Footer',
-      'id'            => 'footer_addresses',
-      'before_widget' => '<div class="widget footer-widget">',
-      'after_widget'  => '</div>',
-      'before_title'  => '<h2 class="widget-title">',
-      'after_title'   => '</h2>',
-  ));
-
-  register_sidebar(array(
-    'name'          => 'Endereços do Footer 2',
-    'id'            => 'footer_addresses2',
-    'before_widget' => '<div class="widget footer-widget">',
-    'after_widget'  => '</div>',
-    'before_title'  => '<h2 class="widget-title">',
-    'after_title'   => '</h2>',
-  ));
-
-  register_sidebar(array(
+    register_sidebar(array(
     'name'          => 'Emails de contato',
     'id'            => 'footer_email',
     'before_widget' => '<div class="widget footer-widget">',
     'after_widget'  => '</div>',
     'before_title'  => '<h2 class="widget-title">',
     'after_title'   => '</h2>',
-  ));
-
-  // Widget para links de soluções
-  register_sidebar(array(
-    'name'          => 'Titulo sessão de links',
-    'id'            => 'footer_solutions_title',
-    'before_widget' => '<div class="widget footer-widget">',
-    'after_widget'  => '</div>',
-    'before_title'  => '<h2 class="widget-title">',
-    'after_title'   => '</h2>',
-  ));
-
-  register_sidebar(array(
-      'name'          => 'Links de Soluções do Footer',
-      'id'            => 'footer_solutions_links',
-      'before_widget' => '<div class="widget footer-widget">',
-      'after_widget'  => '</div>',
-      'before_title'  => '<h2 class="widget-title">',
-      'after_title'   => '</h2>',
-  ));
-
-  // Widget para links Avanti
-  register_sidebar(array(
-      'name'          => 'Links da Avanti',
-      'id'            => 'footer_avanti_links',
-      'before_widget' => '<div class="widget footer-widget">',
-      'after_widget'  => '</div>',
-      'before_title'  => '<h2 class="widget-title">',
-      'after_title'   => '</h2>',
-  ));
+  ));  
 
   // Widget para informações e redes sociais
   register_sidebar(array(
@@ -160,6 +122,75 @@ function register_footer_widgets() {
   ));
 }
 add_action('widgets_init', 'register_footer_widgets');
+
+
+//CÓDIGO DO METABOX PLUGIN
+add_filter('rwmb_meta_boxes', 'registrar_meta_box_cards');
+function registrar_meta_box_cards($meta_boxes) {
+    $meta_boxes[] = [
+        'id' => 'solutions_cards1',
+        'title' => 'Cards de Solução 1',
+        'post_types' => ['solutions_slider'], //post onde o campo será exibido
+        'fields' => [
+              [
+                'id' => 'solution_title', //id para recuperar os campos
+                'type' => 'text',
+                'name' => 'Titulo do card de Solução',
+                'placeholder' => 'Digite o titulo do card',
+              ],
+              [
+                'type' => 'image',
+                'name' => esc_html__( 'Image_solutions', 'online-generator' ),
+                'id'   => 'image_solutions',
+                'max_file_uploads' => 1,
+              ],
+              [
+                  'id' => 'cards', //id para recuperar os campos
+                  'type' => 'text',
+                  'clone' => true, //clonar/adicionar múltiplos campos
+                  'sort_clone' => true, //reorganizar os campos
+                  'name' => 'Card',
+                  'placeholder' => 'Digite o nome do card',
+              ],
+        ],
+    ];
+    return $meta_boxes;
+}
+
+add_filter('rwmb_meta_boxes', 'registrar_meta_box_cards2');
+function registrar_meta_box_cards2($meta_boxes) {
+    $meta_boxes[] = [
+        'id' => 'solutions_cards2',
+        'title' => 'Cards de Solução 2',
+        'post_types' => ['solutions_slider'], //post onde o campo será exibido
+        'fields' => [
+              [
+                'id' => 'solution_title2', //id para recuperar os campos
+                'type' => 'text',
+                'clone' => true, //clonar/adicionar múltiplos campos
+                'sort_clone' => true, //reorganizar os campos
+                'name' => 'Titulo do card de Solução',
+                'placeholder' => 'Digite o titulo do card',
+              ],
+              [
+                'type' => 'image',
+                'name' => esc_html__( 'Image_solutions', 'online-generator' ),
+                'id'   => 'image_solutions2',
+                'max_file_uploads' => 1,
+              ],
+              [
+                  'id' => 'cards2', //id para recuperar os campos
+                  'type' => 'text',
+                  'clone' => true, //clonar/adicionar múltiplos campos
+                  'sort_clone' => true, //reorganizar os campos
+                  'name' => 'Card',
+                  'placeholder' => 'Digite o nome do card',
+              ],
+        ],
+    ];
+    return $meta_boxes;
+}
+
 
 
 

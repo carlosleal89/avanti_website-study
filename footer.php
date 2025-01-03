@@ -28,10 +28,7 @@
           <div class="links_container flex flex-col pb-8">
             <h1 class="text-white mb-1">
               Soluções para seu E-commerce
-            </h1>
-            <!-- <?php if (is_active_sidebar('footer_solutions_title')) : ?>
-                <?php dynamic_sidebar('footer_solutions_title'); ?>
-            <?php endif; ?> -->
+            </h1>            
             <div class="flex flex-col gap-y-4 ">
               <p>
                 <a href=<?php the_field('link1') ?> class="flex items-center gap-x-2">
@@ -51,9 +48,6 @@
                   <img src=<?php echo get_template_directory_uri() . "/assets/extern-link.svg" ?> alt="link externo">
                 </a>
               </p>
-              <!-- <?php if (is_active_sidebar('footer_solutions_links')) : ?>
-                <?php dynamic_sidebar('footer_solutions_links'); ?>
-              <?php endif; ?> -->
             </div>
           </div>
           <div class="avanti-links-container flex flex-col text-sm text-grayishblue">
