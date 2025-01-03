@@ -91,10 +91,6 @@
       </div>
       <div class="info_social_media_container flex flex-col md:flex-row lg:flex-row justify-between">
         <div class="info_container flex flex-col gap-y-4">
-          <!-- <p>© 2024 Todos os Direitos Reservados.</p>
-          <p>Avanti Desenvolvimento de Sistemas LTDA<br>
-          CNPJ 19.697.992/0001-86</p>
-          <p class="text-grayishblue">Transformando o futuro do seu comércio digital</p> -->
           <?php if (is_active_sidebar('footer_company-info')) : ?>
               <?php dynamic_sidebar('footer_company-info'); ?>
           <?php endif; ?>

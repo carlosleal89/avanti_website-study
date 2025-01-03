@@ -162,27 +162,25 @@ function registrar_meta_box_cards2($meta_boxes) {
     $meta_boxes[] = [
         'id' => 'solutions_cards2',
         'title' => 'Cards de Solução 2',
-        'post_types' => ['solutions_slider'], //post onde o campo será exibido
+        'post_types' => ['solutions_slider'],
         'fields' => [
               [
-                'id' => 'solution_title2', //id para recuperar os campos
+                'id' => 'solution_title2',
                 'type' => 'text',
-                'clone' => true, //clonar/adicionar múltiplos campos
-                'sort_clone' => true, //reorganizar os campos
                 'name' => 'Titulo do card de Solução',
                 'placeholder' => 'Digite o titulo do card',
               ],
               [
                 'type' => 'image',
-                'name' => esc_html__( 'Image_solutions', 'online-generator' ),
+                'name' => esc_html__( 'Image_solutions2', 'online-generator' ),
                 'id'   => 'image_solutions2',
                 'max_file_uploads' => 1,
               ],
               [
-                  'id' => 'cards2', //id para recuperar os campos
+                  'id' => 'cards2',
                   'type' => 'text',
-                  'clone' => true, //clonar/adicionar múltiplos campos
-                  'sort_clone' => true, //reorganizar os campos
+                  'clone' => true,
+                  'sort_clone' => true,
                   'name' => 'Card',
                   'placeholder' => 'Digite o nome do card',
               ],

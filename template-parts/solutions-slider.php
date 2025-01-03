@@ -40,7 +40,7 @@ if ($query->have_posts()) : ?>
   <?php while ($query->have_posts()) : $query->the_post(); ?>
     <div class="testimonial-slider-item flex">
       <div class="flex flex-col md:flex-row gap-y-5 md:gap-x-8 justify-center items-center p-8 md:max-w-[80%] mx-auto">
-        <div id="implantacao" class="flex flex-col">
+        <div class="flex flex-col">
         <?php
             $title = rwmb_meta('solution_title'); // recupera os valores salvos
             $image_id = rwmb_meta('image_solutions', ['limit' => 1]); //um campo de imagem
@@ -55,9 +55,31 @@ if ($query->have_posts()) : ?>
             $cards = rwmb_meta('cards');
             if (!empty($cards)) :
           ?>
-            <div class="card-business flex flex-wrap gap-2 md:gap-4 max-w-[80%]">
+            <div class="card-business flex flex-wrap gap-2 md:gap-4 max-w-[70%]">
               <?php foreach ($cards as $card) : ?>                  
                 <a class="text-black text-xs md:text-xl p-2 px-4 bg-lightblue" href=""><?php echo esc_html($card); ?></a>            
+              <?php endforeach; ?>
+            </div>
+          <?php endif; ?>
+        </div>
+        <div  class="flex flex-col">
+        <?php
+            $title2 = rwmb_meta('solution_title2'); // recupera os valores salvos
+            $image_id2 = rwmb_meta('image_solutions2', ['limit' => 1]); //um campo de imagem
+
+            if (!empty($title2) && !empty($image_id2)) : ?>
+                <div class="img-title-solutions flex pb-4 md:pb-6 items-center">
+                    <img class="w-[30px]" src="<?php echo $image_id2[0]['url']; ?>" alt="">
+                    <p class="text-black text-xl ml-2"><?php echo esc_html($title2); ?></p>
+                </div>
+            <?php endif; ?>
+          <?php
+            $cards2 = rwmb_meta('cards2');
+            if (!empty($cards2)) :
+          ?>
+            <div class="card-business flex flex-wrap gap-2 md:gap-4 max-w-[70%]">
+              <?php foreach ($cards2 as $card2) : ?>                  
+                <a class="text-black text-xs md:text-xl p-2 px-4 bg-lightblue" href=""><?php echo esc_html($card2); ?></a>            
               <?php endforeach; ?>
             </div>
           <?php endif; ?>
