@@ -151,8 +151,8 @@ function register_footer_widgets() {
 
   // Widget para informações e redes sociais
   register_sidebar(array(
-      'name'          => 'Informações e Redes Sociais do Footer',
-      'id'            => 'footer_social_info',
+      'name'          => 'Informações da empresa',
+      'id'            => 'footer_company-info',
       'before_widget' => '<div class="widget footer-widget">',
       'after_widget'  => '</div>',
       'before_title'  => '<h2 class="widget-title">',

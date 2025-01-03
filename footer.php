@@ -1,3 +1,6 @@
+  <?php
+    $page_id = get_queried_object_id(); //recupera o id da pagina
+  ?>
   <footer class="footer py-10 md:py-20 mx-auto">
     <div class="logo_info_container container flex flex-col px-12 mx-auto justify-between">
       <div class="flex flex-col lg:flex-row justify-between pb-20">
@@ -6,38 +9,31 @@
         </div>
         <div class="flex flex-col lg:flex-row gap-x-8">          
           <div class="addresses_container flex flex-col pb-8 gap-x-8">
-            <div class="address_container flex flex-col pb-4 ">
-              <!-- <h1 class="text-white mb-1"><?php the_field('cidade') ?> - <?php the_field('estado') ?></h1>
-              <p><?php the_field('teste_campo'); ?>, <?php the_field('numero') ?></p>
-              <p><?php the_field('complemento') ?></p>
-              <p><?php the_field('bairro') ?> - CEP <?php the_field('cep') ?></p> -->
-              <?php if (is_active_sidebar('footer_addresses')) : ?>
-                  <?php dynamic_sidebar('footer_addresses'); ?>
-              <?php endif; ?>
+            <div class="address_container flex flex-col pb-4 text-sm text-grayishblue ">
+              <h1 class="text-white mb-1"><?php the_field('cidade', $page_id) ?> - <?php the_field('estado', $page_id) ?></h1>
+              <p><?php the_field('logradouro', $page_id); ?>, <?php the_field('numero', $page_id) ?></p>
+              <p><?php the_field('complemento', $page_id) ?></p>
+              <p><?php the_field('bairro', $page_id) ?> - CEP <?php the_field('cep', $page_id) ?></p>
             </div>
-            <div class="address_container2 flex flex-col pb-4">
-              <!-- <h1 class="text-white mb-1"><?php the_field('cidade2') ?> - <?php the_field('estado2') ?></h1>
-              <p><?php the_field('logradouro2') ?>, <?php the_field('numero2') ?></p>
-              <p><?php the_field('complemento2') ?></p>
-              <p><?php the_field('bairro2') ?> - CEP <?php the_field('cep2') ?></p> -->
-              <?php if (is_active_sidebar('footer_addresses2')) : ?>
-                  <?php dynamic_sidebar('footer_addresses2'); ?>
-              <?php endif; ?>
+            <div class="address_container2 flex flex-col pb-4 text-sm text-grayishblue">
+              <h1 class="text-white mb-1"><?php the_field('cidade2', $page_id) ?> - <?php the_field('estado2', $page_id) ?></h1>
+              <p><?php the_field('logradouro2', $page_id) ?>, <?php the_field('numero2', $page_id) ?></p>
+              <p><?php the_field('complemento2', $page_id) ?></p>
+              <p><?php the_field('bairro2', $page_id) ?> - CEP <?php the_field('cep2', $page_id) ?></p>
             </div>
-            <!-- <p class="text-sm text-grayishblue"><?php the_field('email_de_contato') ?></p> -->
             <?php if (is_active_sidebar('footer_email')) : ?>
                 <?php dynamic_sidebar('footer_email'); ?>
             <?php endif; ?>
           </div>          
           <div class="links_container flex flex-col pb-8">
-            <!-- <h1 class="text-white mb-1">
+            <h1 class="text-white mb-1">
               Soluções para seu E-commerce
-            </h1> -->
-            <?php if (is_active_sidebar('footer_solutions_title')) : ?>
+            </h1>
+            <!-- <?php if (is_active_sidebar('footer_solutions_title')) : ?>
                 <?php dynamic_sidebar('footer_solutions_title'); ?>
-            <?php endif; ?>
+            <?php endif; ?> -->
             <div class="flex flex-col gap-y-4 ">
-              <!-- <p>
+              <p>
                 <a href=<?php the_field('link1') ?> class="flex items-center gap-x-2">
                   <?php the_field('texto_link_1'); ?>
                   <img src=<?php echo get_template_directory_uri() . "/assets/extern-link.svg" ?> alt="link externo">
@@ -51,13 +47,13 @@
               </p>
               <p>
                 <a href=<?php the_field('link3') ?> class="flex items-center gap-x-2">
-                  <?php the_field('test212'); ?>
+                  <?php the_field('texto_link_2'); ?>
                   <img src=<?php echo get_template_directory_uri() . "/assets/extern-link.svg" ?> alt="link externo">
                 </a>
-              </p> -->
-              <?php if (is_active_sidebar('footer_solutions_links')) : ?>
+              </p>
+              <!-- <?php if (is_active_sidebar('footer_solutions_links')) : ?>
                 <?php dynamic_sidebar('footer_solutions_links'); ?>
-              <?php endif; ?>
+              <?php endif; ?> -->
             </div>
           </div>
           <div class="avanti-links-container flex flex-col text-sm text-grayishblue">
@@ -100,11 +96,14 @@
         </div>
       </div>
       <div class="info_social_media_container flex flex-col md:flex-row lg:flex-row justify-between">
-        <div class="info_container flex flex-col text-sm gap-y-4">
-          <p>© 2024 Todos os Direitos Reservados.</p>
+        <div class="info_container flex flex-col gap-y-4">
+          <!-- <p>© 2024 Todos os Direitos Reservados.</p>
           <p>Avanti Desenvolvimento de Sistemas LTDA<br>
           CNPJ 19.697.992/0001-86</p>
-          <p class="text-grayishblue">Transformando o futuro do seu comércio digital</p>
+          <p class="text-grayishblue">Transformando o futuro do seu comércio digital</p> -->
+          <?php if (is_active_sidebar('footer_company-info')) : ?>
+              <?php dynamic_sidebar('footer_company-info'); ?>
+          <?php endif; ?>
         </div>
         <div class="social_media_icons_container flex gap-x-4 items-center pt-8">
           <p class="text-sm text-white">Redes Sociais</p>
