@@ -31,8 +31,8 @@
             </h1>            
             <div class="flex flex-col gap-y-4 ">
               <p>
-                <a href=<?php the_field('link1') ?> class="flex items-center gap-x-2">
-                  <?php the_field('texto_link_1'); ?>
+                <a href=<?php the_field('link_solucoes_1', $page_id); ?> class="flex items-center gap-x-2">
+                  <!-- <?php the_field('tste222', $page_id); ?> -->
                   <img src=<?php echo get_template_directory_uri() . "/assets/extern-link.svg" ?> alt="link externo">
                 </a>
               </p>
