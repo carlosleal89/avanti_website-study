@@ -1,0 +1,8 @@
+.solutions-card.active h1, .solutions-card.active img {
+  filter: none;
+  color: blue;
+}
+
+.card-business a {
+  border-radius: 999px;
+}

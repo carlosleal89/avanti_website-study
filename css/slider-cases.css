@@ -1,0 +1,35 @@
+.slider-container button {
+  color: black;
+  border: 1px solid black;
+}
+
+.custom-dots .slick-dots {
+  display: flex;
+  list-style-type: none;
+  margin: 0 20px 0 0;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.custom-dots .slick-dots li {
+  width: 100%;
+}
+
+.custom-dots .slick-dots li button {
+  color: white;
+  background-color: #e8e9ea;
+  display: block;
+  height: 3px;
+  width: 100%;
+}
+
+.custom-dots .slick-dots .slick-active button {
+  background-color: blue;  
+}
+
+.slider-nav-buttons {
+  border: 1px solid rgb(232 233 234);
+  border-radius: 100px;
+  width: 2.75rem;
+  height: 2.75rem;
+}

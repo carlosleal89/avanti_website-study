@@ -1,0 +1,18 @@
+.testimonials .custom-dots ul {
+  gap: 3px
+}
+
+.custom-dot-testimonial {
+  height: 3px;
+  background-color: gray;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+#custom-dots-testimonials .slick-dots .slick-active .custom-dot-testimonial {
+  background-color: blue;
+}
+
+#custom-dots-testimonials .slick-dots {
+  margin: 0;
+}

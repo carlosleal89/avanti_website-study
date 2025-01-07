@@ -17,7 +17,11 @@ add_action( 'after_setup_theme', 'wptheme_config', 0);
 function enqueue_styles() {
   wp_enqueue_style('tailwind-css', get_template_directory_uri() . '/src/output.css');
   wp_enqueue_style('css-custom-styles', get_template_directory_uri() . '/css/template.css');
-  wp_enqueue_style('contact-form', get_template_directory_uri() . '/css/contact-form.css', array('css-custom-styles'));
+  wp_enqueue_style('contact-form', get_template_directory_uri() . '/css/contact-form.css', array('css-custom-styles')); /*o ultimo argurmento é a dependencia*/
+  wp_enqueue_style('main-menu', get_template_directory_uri() . '/css/header-menu.css', array('css-custom-styles'));
+  wp_enqueue_style('slider-cases', get_template_directory_uri() . '/css/slider-cases.css', array('css-custom-styles'));
+  wp_enqueue_style('slider-solutions', get_template_directory_uri() . '/css/slider-solutions.css', array('css-custom-styles'));
+  wp_enqueue_style('slider-testimonials', get_template_directory_uri() . '/css/slider-testimonials.css', array('css-custom-styles'));
 }
 add_action('wp_enqueue_scripts', 'enqueue_styles');
 
