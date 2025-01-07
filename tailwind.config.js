@@ -13,6 +13,7 @@ module.exports = {
         silverlight: 'rgb(232 233 234 / <alpha-value>)',
         darkblack: 'rgb(21 24 27 / <alpha-value>)',
         slategray: 'rgb(104 108 114 / <alpha-value>)',
+        lightgray: 'rgb(74 80 87 / <alpha-value>)',
       }
     },
   },

@@ -1,22 +1,22 @@
 <div class="solutions-card-container flex gap-x-4 justify-evenly container mx-auto">
   <div class="solutions-card flex flex-col items-center py-6 md:py-8 cursor pointer active" data-slide="0">
     <img class="w-[20px] grayscale" src=<?php echo get_template_directory_uri() . "/assets/imgs/solutions-slider/basket-modern-circle.svg" ?> alt="">
-    <p class="text-black">Digital Sales</p>
-    <p class="!text-black">Evolua suas vendas</p>
+    <h1 class="text-black text-xs">Digital Sales</h1>
+    <p class="!text-black text-[10px] md:text-sm">Evolua suas vendas</p>
   </div>
   <div class="solutions-card flex flex-col items-center py-6 md:py-8 cursor pointer" data-slide="1">
     <img class="w-[20px] grayscale" src=<?php echo get_template_directory_uri() . "/assets/imgs/solutions-slider/basket-refund.svg" ?> alt="">
-    <p class="text-black">Sales Performance</p>
-    <p class="!text-black">Melhore o desempenho</p>
+    <h1 class="text-black text-xs">Sales Performance</h1>
+    <p class="!text-black text-[10px] md:text-sm">Melhore o desempenho</p>
   </div>
   <div class="solutions-card flex flex-col items-center py-6 md:py-8 cursor pointer" data-slide="2">
     <img class="w-[20px] grayscale" src=<?php echo get_template_directory_uri() . "/assets/imgs/solutions-slider/shopping-bag-favorite-heart.svg" ?> alt="">
-    <p class="text-black">Experience</p>
-    <p class="!text-black">Esperiência inesquecível e garantida</p>
+    <h1 class="text-black text-xs">Experience</h1>
+    <p class="!text-black text-[10px] md:text-sm">Esperiência inesquecível e garantida</p>
   </div>
 </div>
 <!-- NAV BUTTON AND DOTS -->
-<div class="nav-dots-container">
+<div class="nav-dots-container hidden md:block">
   <div id="custom-arrows-solutions" class="custom-arrows flex gap-x-4">
     <button id="solutions-prev-arrow" class="text-black">
       <img src=<?php echo get_template_directory_uri() . "/assets/imgs/solutions-slider/ArrowSoluLeft.png" ?> alt="">
@@ -39,7 +39,7 @@ if ($query->have_posts()) : ?>
   <div class="slider-solutions">
   <?php while ($query->have_posts()) : $query->the_post(); ?>
     <div class="testimonial-slider-item flex">
-      <div class="flex flex-col md:flex-row gap-y-5 md:gap-x-8 justify-center items-center p-8 md:max-w-[80%] mx-auto">
+      <div class="flex flex-col md:flex-row gap-y-5 md:gap-x-8 justify-center md:items-center p-8 md:max-w-[80%] mx-auto">
         <div class="flex flex-col">
         <?php
             $title = rwmb_meta('solution_title'); // recupera os valores salvos

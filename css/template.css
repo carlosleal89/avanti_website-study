@@ -15,10 +15,6 @@ body {
   color: white;
 }
 
-/* .banner-hero-content p {
-  font-size: 1.25rem;
-} */
-
 .footer {
   background-color: #151A20;
 }
@@ -205,7 +201,7 @@ body {
 }
 
 /*Slider Solutions*/
-.solutions-card.active p, .solutions-card.active img {
+.solutions-card.active h1, .solutions-card.active img {
   filter: none;
   color: blue;
 }
