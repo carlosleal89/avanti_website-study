@@ -10,7 +10,7 @@
         <div class="flex flex-col lg:flex-row gap-x-8">          
           <div class="addresses_container flex flex-col pb-8 gap-x-8">
             <div class="address_container flex flex-col pb-4 text-sm text-grayishblue ">
-              <h1 class="text-white mb-1"><?php the_field('cidade', $page_id) ?> - <?php the_field('estado', $page_id) ?></h1>
+              <h1 class="text-white mb-1"><?php the_field('cidade_principal', $page_id) ?> - <?php the_field('estado', $page_id) ?></h1>
               <p><?php the_field('logradouro', $page_id); ?>, <?php the_field('numero', $page_id) ?></p>
               <p><?php the_field('complemento', $page_id) ?></p>
               <p><?php the_field('bairro', $page_id) ?> - CEP <?php the_field('cep', $page_id) ?></p>
@@ -26,25 +26,25 @@
             <?php endif; ?>
           </div>          
           <div class="links_container flex flex-col pb-8">
-            <h1 class="text-white mb-1">
+            <h1 class="text-white text-sm mb-1">
               Soluções para seu E-commerce
             </h1>            
-            <div class="flex flex-col gap-y-4 ">
+            <div class="flex flex-col gap-y-4 text-grayishblue text-sm">
               <p>
-                <a href=<?php the_field('link_solucoes_1', $page_id); ?> class="flex items-center gap-x-2">
-                  <!-- <?php the_field('tste222', $page_id); ?> -->
+                <a href=<?php the_field('link1', $page_id); ?> class="flex items-center gap-x-2">
+                  <?php the_field('texto_link_1', $page_id); ?>
                   <img src=<?php echo get_template_directory_uri() . "/assets/extern-link.svg" ?> alt="link externo">
                 </a>
               </p>
               <p>
-                <a href=<?php the_field('link2') ?> class="flex items-center gap-x-2">
-                <?php the_field('texto_link_2'); ?>
+                <a href=<?php the_field('link2', $page_id) ?> class="flex items-center gap-x-2">
+                <?php the_field('texto_link_2', $page_id); ?>
                   <img src=<?php echo get_template_directory_uri() . "/assets/extern-link.svg" ?> alt="link externo">
                 </a>
               </p>
               <p>
-                <a href=<?php the_field('link3') ?> class="flex items-center gap-x-2">
-                  <?php the_field('texto_link_2'); ?>
+                <a href=<?php the_field('link3', $page_id) ?> class="flex items-center gap-x-2">
+                  <?php the_field('texto_link_3', $page_id); ?>
                   <img src=<?php echo get_template_directory_uri() . "/assets/extern-link.svg" ?> alt="link externo">
                 </a>
               </p>
