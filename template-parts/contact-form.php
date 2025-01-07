@@ -1,4 +1,4 @@
-<div class="container mx-auto px-8">
+<div class="container mx-auto">
   <div class="form-contact-title">
     <h1 class="text-3xl md:text-4xl mb-4 !leading-[50px]">Quer uma proposta<br> personalizada para a sua empresa?</h1>
     <p class="text-grayishblue md:text-lg">Um de nossos Digital Commerce Experts entrará em contato para entender os desafios do seu negócio e conversar sobre como podemos ajudá-lo a acelerar no Comércio Digital.</p>
