@@ -1,9 +1,9 @@
 <?php $background_url = get_template_directory_uri() . '/assets/imgs/ecosystem.png'; ?>
-<div class="flex flex-col md:flex-row items-center md:min-h-[640px] ">
-  <div class="w-[80%] ml-[-10rem] md:ml-[10px] md:w-[40%]">
+<div class="flex flex-col lg:flex-row items-center md:min-h-[640px] ">
+  <div class="w-[80%] ml-[-10rem] lg:ml-[10px] lg:w-[40%]">
     <img class="object-cover md:min-h-[640px]" src=<?php echo $background_url ?> alt="">
   </div>
-  <div id="ecosystem-text" class="flex flex-col px-8 py-8 md:ml-60 md:max-w-lg">
+  <div id="ecosystem-text" class="flex flex-col px-8 py-8 lg:ml-60 md:max-w-lg">
     <h1 class="text-black text-2xl md:text-[44px] text-start text-dark leading-[1.36]">Ecossistema <span class="text-royalblue">Avanti</span></h1>
     <p class="text-lightgray mt-6">O ecossistema representa a nossa integração e conexão com as melhores empresas do mercado. 
       Estamos sintonizados com soluções que endereçam as necessidades do comércio do futuro.</p>

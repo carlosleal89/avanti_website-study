@@ -9,8 +9,8 @@
 <!-- SLIDER CASES -->
 <section class="slider-cases overflow-hidden py-10 px-[2rem] md:pr-0 md:py-20">
   <div class="flex flex-col py-10 md:py20 w-screen overflow-visible">
-    <div class="cases-text-slider flex flex-col md:gap-x-20 lg:flex-row w-screen overflow-visible">
-      <div class="cases-explanation lg:w-[40%] flex flex-col md:items-center lg:items-end pb-8">
+    <div class="cases-text-slider flex flex-col md:gap-x-20 md:flex-row w-screen overflow-visible">
+      <div class="cases-explanation lg:w-[40%] flex flex-col  lg:items-end pb-8">
         <h1 class="text-[28px] w-[74%] md:text-5xl mb-4 text-secondary text-start lg:w-3/4">Explore nossos cases de <span class="text-royalblue">sucesso</span></h1>
         <p class="text-darkishgray mb-6 text-secondary text-start w-[90%] lg:w-3/4">Nossos cases não são apenas exemplos de nosso trabalho, 
           mas são a representação do impacto tangível que podemos ter no seu negócio. 

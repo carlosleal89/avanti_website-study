@@ -17,7 +17,7 @@
 </div>
 <!-- NAV BUTTON AND DOTS -->
 <div class="nav-dots-container hidden md:block">
-  <div id="custom-arrows-solutions" class="custom-arrows flex gap-x-4">
+  <div id="custom-arrows-solutions" class="custom-arrows flex gap-x-4 md:px-8">
     <button id="solutions-prev-arrow" class="text-black">
       <img src=<?php echo get_template_directory_uri() . "/assets/imgs/solutions-slider/ArrowSoluLeft.png" ?> alt="">
     </button>
