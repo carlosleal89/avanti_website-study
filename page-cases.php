@@ -7,7 +7,7 @@
         <div class="case-item">
           <h3><?php the_title(); ?></h3>
         </div>
-      <?php endWhile;
+      <?php endwhile;
       else:
       ?>
         <p>Sorry, no posts...</p>

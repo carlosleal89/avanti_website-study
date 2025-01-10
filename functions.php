@@ -194,6 +194,24 @@ function registrar_meta_box_cards2($meta_boxes) {
     return $meta_boxes;
 }
 
+// MUDA O NOME DOS PLUGINS NO DASHBOARD
+add_action( 'admin_menu', 'myRenamedPlugin' );
+
+function myRenamedPlugin() {
+    global $menu;
+    // print_r($menu); //mostra todos os items do dashboard no codigo fonte da pagina do painel de admin
+    $searchPlugin = "flamingo"; 
+    $replaceName = "Leads do Site";
+
+    $menuItem = "";
+    foreach($menu as $key => $item) {
+      if ( $item[2] === $searchPlugin) {
+        $menuItem = $key;
+      }
+    }
+    $menu[$menuItem][0] = $replaceName; // altera o nome do plugin no dashboard
+}
+
 
 
 

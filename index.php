@@ -1,4 +1,5 @@
 <div>
+<?php get_header(); ?>
   <div class="cases-container">
   <h1>Cases</h1>
   <?php if( have_posts() ) : ?>
